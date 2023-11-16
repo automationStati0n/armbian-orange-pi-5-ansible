@@ -3,10 +3,10 @@
   become: yes
   roles:
     - role: orangepi5-hdmi
-    - role: no-swap
+#    - role: no-swap
     - role: no-boot-logo
     - role: net-disable-ipv6
-    - role: disable-root-account
+#    - role: disable-root-account
     - role: set-hostname
     - role: set-timezone
     - role: user-ssh-authorized-key
@@ -17,8 +17,8 @@
     - role: kodi
     - role: extra-software
     - role: firefox-no-snap
-    - role: input-remapper
-    - role: lgtv
-    - role: surround-sound-test
+#    - role: input-remapper
+#    - role: lgtv
+#    - role: surround-sound-test
     - role: sshfs
     - role: docker
