@@ -2,7 +2,7 @@
   apt:
     pkg:
       - kodi
-    state: latest
+    state: matrix
 
 - name: Copy to kodi-wayland.desktop
   shell: mv /usr/share/xsessions/kodi.desktop /usr/share/wayland-sessions/kodi-wayland.desktop
