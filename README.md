@@ -30,7 +30,9 @@ sudo apt update
 sudo apt install -y git ansible nano
 
 #Clone this repo and go to it's directory
-git clone https://github.com/martivo/armbian-orange-pi-5-ansible.git
+mkdir ~/Github
+cd ~/Github
+git clone https://github.com/automationStati0n/armbian-orange-pi-5-ansible.git
 cd armbian-orange-pi-5-ansible
 
 #Create configuration files
