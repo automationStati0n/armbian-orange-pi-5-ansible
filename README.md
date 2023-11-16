@@ -23,8 +23,11 @@ I am doing this as a hobby, so don't have too high excpectations.
 #Login to your SBC over SSH or use it's keyboard and screen directly on the device
 ssh <your regular user>@<Your Orange Pi 5 IP address>
 
-#Install needed tools to use ansible, git and vim(you can use nano or something else too)
-sudo apt install -y git ansible vim
+#Update package repositories
+sudo apt update
+
+#Install needed tools to use ansible, git and nano(you can use nano or something else too)
+sudo apt install -y git ansible nano
 
 #Clone this repo and go to it's directory
 git clone https://github.com/martivo/armbian-orange-pi-5-ansible.git
@@ -35,10 +38,10 @@ cp site.example.yml site.yml
 cp inventory.example-local.yml inventory.yml
 
 #Edit site.yml to your needs. Read **About roles and variables** below for more info.
-vim site.yml
+nano site.yml
 
 #Edit inventory.yml to fit your setup. Read **About roles and variables** below for more info.
-vim inventory.yml
+nano inventory.yml
 
 
 #Run ansible
@@ -61,10 +64,10 @@ cp site.example.yml site.yml
 cp inventory.example-remote.yml inventory.yml
 
 #Edit site.yml to your needs. Read **About roles and variables** below for more info.
-vim site.yml
+nano site.yml
 
 #Edit inventory.yml to fit your setup. Read **About roles and variables** below for more info.
-vim inventory.yml
+nano inventory.yml
 
 #Run ansible, if you have public key authentication in SSH then you can skip the --ask-pass flag.
 ansible-playbook --ask-pass site.yml
@@ -83,7 +86,7 @@ ansible-playbook --ask-pass site.yml
 | --- | --- | --- | --- |
 | disable-root-account | Lock root user and deny root ssh  | | |
 | docker | Install Docker CE | | |
-| extra-software | Additional pacakges that I like (transmission-gtk, vim, prometheus-node-exporter, armbian-config) | extra_software | |
+| extra-software | Additional pacakges that I like (transmission-gtk, nano, prometheus-node-exporter, armbian-config) | extra_software | |
 | firefox-no-snap | Install firefox without using snap. | | |
 | gdm-auto-login | Passwordless login for normal_user in GDM3 | normal_user | ubuntu-desktop-minimal | 
 | gdm-enable-wayland | Enable wayland in GDM3 | | ubuntu-desktop-minimal, orangepi5-hdmi |
