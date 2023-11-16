@@ -3,12 +3,12 @@ all:
     127.0.0.1:
       ansible_connection: local
   vars:
-    normal_user: <non root user of your SBC that you created during armbian first boot, ex: martin>
+    normal_user: jesse
     timezone: America/New_York
     hostname: orangepi
-    user_ssh_authorized_key: <your public SSH key: ssh-rsa AAA...>  #Used by user-ssh-authorized-key role
+    user_ssh_authorized_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCoQIHLk9jDF3qBSkqCsCaL9I8vgCeJY0vwZim+v0yBiOLMtC8a08Y0BVUP/kqx2cBRgYOO49xy3V1jkfdcTRHc3gLkUFmnN35lqcl+mWfDdJICYekrNM/YorReOFWxZ+eGcP1JnHa1+ryKdfnK4bdMRpKJfd6eQ+ZWiQ2bCxL3wklQ/+2Al9LZ6d+x3U4+npepbf0wf+jogspyWb7rTzx5+O717DQGuTMaiiOzZVTehVZ5ytntb7whpLASWAgbNwEN3Zbwtp1pI9zUlW154jjbV0kHj6ZUs0WtYL8unQ5OWb3C+DtazgbB/vFPPZuTP3pgyZZoONFX5EL76b3TC44/U1Y0b6IBbyR057ZcCo2PDgOd9UCROewgWvf3JeFL9dHZdqjAi2POIbLgsmgiDsCUcJzZSpywnzDhuuyEP4R7KqaOe5R+6yJQDzebVJd2Iu9imJsAW3Tr9w0LOwCCUfcPWa6s3DBo6SHDmLZieDI0CdOaRl3oRPZF4JIXU2NqaSIaCqKMrpiEFpruMHwfpA5s0LQIsZ6PiXtZbB0tycyRYlJqNZdmWQ5rK99GFRUDR5tgmniMzhOCioJRLKdZUHL2WA6oJXtpRh/w7+CR2VGpp0hWzc4ic5bo7C33MnD5RKMjntJX/2ygNollR/zVyBtkYThlZX79vGZls4/ZxX0HfQ==
     ssh_fs_mount_directory: /mnt/shared
-    ssh_fs_mount_connection: <SSHFS connection, ex: user@orangepi:/your/directory/shared> #Used by sshfs role
+    ssh_fs_mount_connection: user@orangepi:/mnt/shared
     extra_software:
     - armbian-config
     - dnsutils
